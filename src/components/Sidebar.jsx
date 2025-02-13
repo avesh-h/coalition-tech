@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import { usePatientsData } from "../context/PatientsDataContext";
 
 const patients = [
   {
@@ -75,6 +76,8 @@ const patients = [
 ];
 
 function Sidebar() {
+  const patientsData = usePatientsData();
+  console.log("ppppppppppppppp", patientsData);
   return (
     <Box
       sx={{
