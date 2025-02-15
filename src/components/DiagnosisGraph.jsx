@@ -18,7 +18,7 @@ const bloodPressureData = [
   { month: "Mar, 2024", systolic: 160, diastolic: 78 },
 ];
 
-const DiagnosisHistory = () => {
+const DiagnosisHistory = ({ children }) => {
   return (
     <Box
       sx={{
@@ -44,44 +44,6 @@ const DiagnosisHistory = () => {
           borderRadius: 3,
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            // mb: 3,
-          }}
-        >
-          {/* <Typography
-            sx={{
-              fontSize: "20px",
-              fontWeight: 600,
-              color: "#1a1a1a",
-              lineHeight: 1,
-            }}
-          >
-            Blood Pressure
-          </Typography> */}
-          {/* <Select
-            defaultValue="6months"
-            size="small"
-            sx={{
-              minWidth: 150,
-              "& .MuiOutlinedInput-notchedOutline": {
-                border: "none",
-              },
-              "& .MuiSelect-select": {
-                py: 0.5,
-                color: "#666",
-                display: "flex",
-                alignItems: "center",
-              },
-            }}
-          >
-            <MenuItem value="6months">Last 6 months</MenuItem>
-          </Select> */}
-        </Box>
-
         <Box sx={{ display: "flex" }}>
           <Box sx={{ width: "70%", height: 300, position: "relative" }}>
             <Stack
@@ -249,6 +211,7 @@ const DiagnosisHistory = () => {
           </Box>
         </Box>
       </Box>
+      <Box sx={{ pt: "20px", textAlign: "left" }}>{children}</Box>
     </Box>
   );
 };
